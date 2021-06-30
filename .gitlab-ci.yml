@@ -7,7 +7,7 @@ trigger_af_dag:
     include: cic/.gitlab-airflowdags.yml
   rules:
     - changes:
-        - dag/*
+        - "*/dags/*"
 
 # build-job:
 #   stage: build
