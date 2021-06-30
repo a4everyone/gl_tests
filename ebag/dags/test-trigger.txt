@@ -1,2 +1,3 @@
 testing wildcard triggers
 second test to ensure this is the trigger
+third test, 2 simultaneous triggers
