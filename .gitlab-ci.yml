@@ -1,3 +1,14 @@
+stages:
+  - triggers
+
+trigger_af_dag:
+  stage: triggers
+  trigger:
+    include: cic/.gitlab-airflowdags.yml
+  rules:
+    - changes:
+        - dag/*
+
 build-job:
   stage: build
   script:

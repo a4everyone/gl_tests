@@ -1,0 +1,5 @@
+
+build-af-dag:
+  stage: build
+  script:
+    - echo "building airflow dag"
