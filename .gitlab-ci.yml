@@ -1,18 +1,29 @@
 stages:
   - triggers
 
+include: 
+  - project: 'a4e1/a4e-module-infra'
+    ref: main
+    file: 'gitlab-commons/dag-baker.yaml'
+
 trigger_ebag_af_dag:
   stage: triggers
-  trigger:
-    include: cic/.gitlab-airflowdags.yml
+  variables:
+    CLI_ID:  cli_ebg
+  extends: .bake_dag
+  # trigger:
+  #   include: cic/.gitlab-airflowdags.yml
   rules:
     - changes:
         - "ebag/dags/*"
 
 trigger_bsl_af_dag:
   stage: triggers
-  trigger:
-    include: cic/.gitlab-airflowdags.yml
+  variables:
+    CLI_ID:  cli_bsl
+  extends: .bake_dag
+  # trigger:
+  #   include: cic/.gitlab-airflowdags.yml
   rules:
     - changes:
         - "bsl/dags/*"
