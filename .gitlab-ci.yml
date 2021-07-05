@@ -10,9 +10,9 @@ trigger_ebag_af_dag:
   stage: build
   variables:
     CLI_ID:  cli_ebg
-  # extends: .bake_dag
-  script:
-    - echo "cliid is $CLI_ID"
+  extends: .bake_dag
+  # script:
+  #   - echo "cliid is $CLI_ID"
   rules:
     - changes:
         - "ebag/dags/*"
@@ -21,9 +21,9 @@ trigger_bsl_af_dag:
   stage: build
   variables:
     CLI_ID:  cli_bsl
-  # extends: .bake_dag
-  script:
-    - echo "cliid is $CLI_ID"
+  extends: .bake_dag
+  # script:
+  #   - echo "cliid is $CLI_ID"
   rules:
     - changes:
         - "bsl/dags/*"
