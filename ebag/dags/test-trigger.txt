@@ -1,4 +1,4 @@
 testing wildcard triggers
 second test to ensure this is the trigger
 third test, 2 simultaneous triggers
-test 4, included build
+test 4, included build, jaja
