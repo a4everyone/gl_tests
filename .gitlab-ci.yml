@@ -2,8 +2,8 @@ stages:
   - build
 
 include: 
-  - project: 'a4e1/a4e-module-infra'
-    ref: main
+  - project: 'a4everyone/a4e-module-infra'
+    ref: develop
     file: 'gitlab-commons/dag-baker.yaml'
 
 trigger_ebag_af_dag:
