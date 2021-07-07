@@ -1,6 +1,7 @@
 default:
-  image: a4everyone/builder2:0.1.0
-  entrypoint: [""]
+  image: 
+    name: a4everyone/builder2:0.1.0
+    entrypoint: [""]
 
 stages:
   - build
